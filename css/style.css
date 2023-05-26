@@ -1,0 +1,21 @@
+:root {
+    /* COLORS */
+    --primary-clr-purple: hsl(273DEG, 85%, 13%);
+    --primary-clr-green: hsl(150DEG, 100%, 63%);
+    --primary-clr-gray: hsl(271DEG, 12%, 34%);
+    --primary-clr-white: hsl(0DEG, 0%, 100%);
+    --secondary-clr-purple: (276DEG, 100%, 99%);
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+.app__header {
+}
+
+/* border-radius: 25% 25% 50% 50% / 0% 0% 5% 5%; */
