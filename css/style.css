@@ -37,6 +37,7 @@
 }
 
 body {
+  background: var(--secondary-clr-purple);
   font-family: "Manrope", sans-serif;
   text-align: center;
 }
@@ -46,6 +47,16 @@ h2,
 h3 {
   font-family: "Fraunces", system-ui;
 }
+
+h1 {
+  line-height: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 3.8rem;
+}
+
 
 h2, div > span{
   color: var(--primary-clr-purple);
@@ -58,10 +69,10 @@ div > span {
   display: inline-block;
   text-align: center;
   line-height: 46px;
-  width: 48px;
-  height: 46px;
+  width: 3rem;
+  height: 2.875rem;
   font-family: 'Fraunces';
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: var(--fw-semi-bold);
 }
 
@@ -69,14 +80,14 @@ button {
   background: var(--primary-clr-green);
   border: 0;
   padding: .75rem;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: var(--fw-semi-bold);
 }
 
 p {
   color: var(--primary-clr-gray);
   width: 85%;
-  line-height: 32px;
+  line-height: 2rem;
   margin-inline: auto;
 }
 
@@ -101,7 +112,7 @@ p {
 }
 
 .app__header > h1 {
-  font-size: 50px;
+  font-size: 3.120rem;
   margin: 3rem 0;
 }
 
@@ -110,7 +121,62 @@ p {
   justify-content: space-between;
 }
 
-.app__main :first-child && :not(span)  {
-  background-color: var(--secondary-clr-purple);
+.app__main :first-child:not(span) {
   border-radius: 25% 25% 50% 50% / 0% 0% 5% 5%;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+
+.app__main .introduce {
+  background-color: var(--primary-clr-white);
+  margin: 3.8rem 0;
+  margin-inline: auto;
+}
+
+.app__main .introduce img {
+  width: 18rem;
+}
+
+.app__main .introduce div {
+  position: relative;
+  width: 18rem;
+  margin: -3.5rem 0;
+  margin-inline: auto;
+  background: var(--primary-clr-purple);
+  padding: 1.8rem;
+  font-size: 1.2rem;
+}
+
+.app__main .introduce .btn {
+  margin: 2rem 0;
+}
+
+.introduce h3, .introduce p {
+  color: var(--primary-clr-white);
+}
+
+footer .logo-dark {
+  display: block;
+  margin-bottom: 3rem;
+
+}
+
+footer {
+  padding: 3rem;
+}
+
+footer i {
+  margin: 0 .8rem;
+}
+
+.spring-left, .spring-right {
+  display: none;
+}
+
+.underline-text {
+  text-decoration-color: var(--primary-clr-green);
+  text-decoration-line: underline;
+  text-decoration-thickness: .2rem;
+  text-underline-position: under;
 }
