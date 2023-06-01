@@ -37,7 +37,6 @@
 }
 
 body {
-  background: var(--secondary-clr-purple);
   font-family: "Manrope", sans-serif;
   text-align: center;
 }
@@ -97,6 +96,7 @@ p {
   color: var(--primary-clr-white);
   height: 25rem;
   padding: 2rem;
+  position: relative;
 }
 
 .app__header-img {
@@ -121,16 +121,23 @@ p {
   justify-content: space-between;
 }
 
-.app__main :first-child:not(span) {
-  border-radius: 25% 25% 50% 50% / 0% 0% 5% 5%;
-  padding: 1rem;
-  margin-top: 3rem;
+.app__main {
+  margin-top: -7.25rem;
 }
 
+.app__main .insights {
+  background: var(--secondary-clr-purple);
+  border-radius: 25% 25% 50% 50% / 0% 0% 5% 5%;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.insights > :first-child { 
+  margin-top: 12rem;
+}
 
 .app__main .introduce {
   background-color: var(--primary-clr-white);
-  margin: 3.8rem 0;
   margin-inline: auto;
 }
 
@@ -163,14 +170,15 @@ footer .logo-dark {
 }
 
 footer {
-  padding: 3rem;
+  background: var(--primary-clr-white);
+  padding: 5rem;
 }
 
 footer i {
   margin: 0 .8rem;
 }
 
-.spring-left, .spring-right {
+.spring-left, .spring-right, .spring-down {
   display: none;
 }
 
@@ -179,4 +187,109 @@ footer i {
   text-decoration-line: underline;
   text-decoration-thickness: .2rem;
   text-underline-position: under;
+}
+
+@media (min-width: 625px) {
+
+  .app__header h1 {
+    font-size: 3.75rem;
+  }
+
+  .app__header-img img{
+    width: 24rem;
+    height: 14rem;
+    margin: 2.5rem 0;
+  }
+
+  .insights > *  {
+    display: flex;
+    text-align: start;
+    margin-inline: auto;
+    width: 80vw;
+  }
+
+  .insights > :first-child { 
+    margin-top: 15rem;
+  }
+
+
+  .insights div > :first-child {
+    flex: .25;
+    justify-content: end;
+  }
+
+  .insights h2, .insights p {
+    text-align: start;
+    margin-left: 0;
+  }
+
+  .insights div > :nth-child(2){
+    flex: 1;
+  }
+}
+
+@media (min-width: 745px) {
+
+  .app__header .spring-left, .app__header .spring-right, .app__main .spring-down {
+    display: initial;
+    position: absolute;
+  }
+
+  .app__header .spring-left > img {
+    height: 215px;
+    width: 270px;
+  }
+
+  .app__header .spring-right > img {
+    height: 112px;
+    width: 141px;
+  }
+
+  .app__main .spring-down > img {
+    width: 173px;
+    height: 137px;
+  }
+
+  .app__header .spring-left {
+    left: -10rem;
+    top: 6rem;
+  }
+
+  .app__header .spring-right {
+    right: -4rem;
+  }
+
+  .app__main .spring-down {
+    right: 2rem;
+    top: 20rem;
+  }
+
+  .app__header-img img{
+    width: 27rem;
+    height: 17rem;
+    margin: 2.5rem 0;
+  }
+
+  .app__main .introduce {
+    width: 51.563rem;
+  }
+
+  .app__main .introduce > picture {
+    margin-right: 20rem;
+  }
+
+  .app__main .introduce > div {
+    margin-right: 3.5rem;
+    margin-top: -8.5rem;
+    text-align: start;
+    padding: 2rem;
+    width: 26rem;
+  }
+
+  .introduce  p, .introduce h3 {
+    text-align: start;
+    margin: 0;
+    margin-inline: auto;
+    width: 25rem;
+  }
 }
