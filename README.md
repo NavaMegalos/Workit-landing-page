@@ -12,7 +12,6 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -26,15 +25,26 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
+<div style="display:flex">
+  <img src="./assets/images/img-mobile.png">
+  <img src="./assets/images/img-desktop.png">
+</div>
 
 ### Links
+Link to the solution: https://workit-landing-page-nava.netlify.app/
 
 ## My process
 
 ### Built with
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
 
 ### What I learned
-
-### Useful resources
-
+``` 
+First of all, I wanna say that this challenge was a good one for me because of the very little details that are behind the structure, like for example the border at the bottom of the first two sections or the position of the images in it... nevertheless I enjoyed the time spend in this challenge and I am very excited for acquire more knowledge about css and html in the new ones!
+```
 ## Author
+
+- Juan Nava
+- Profile on FrontEnd Mentor: https://www.frontendmentor.io/profile/juannava67 
