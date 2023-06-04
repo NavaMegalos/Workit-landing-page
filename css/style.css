@@ -39,6 +39,7 @@
 body {
   font-family: "Manrope", sans-serif;
   text-align: center;
+  overflow-x: hidden;
 }
 
 h1,
@@ -75,12 +76,21 @@ div > span {
   font-weight: var(--fw-semi-bold);
 }
 
-button {
+.btn {
   background: var(--primary-clr-green);
   border: 0;
   padding: .75rem;
   font-size: 1rem;
   font-weight: var(--fw-semi-bold);
+}
+
+.btn:hover {
+  background: transparent;
+  border: 1px solid var(--primary-clr-green);
+  cursor: pointer;
+  color: var(--primary-clr-green);
+  transform: 1s ;
+  transition: 1s;
 }
 
 p {
@@ -97,18 +107,18 @@ p {
   height: 25rem;
   padding: 2rem;
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .app__header-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  margin: -5rem -12rem;
 }
 
 .app__header-img img{
   width: 22rem;
   height: 12rem;
-  margin: 2.5rem 0;
 }
 
 .app__header > h1 {
@@ -195,6 +205,10 @@ footer i {
     font-size: 3.75rem;
   }
 
+  .app__header-img {
+    margin: -8rem -12rem;
+  }
+
   .app__header-img img{
     width: 24rem;
     height: 14rem;
@@ -202,9 +216,11 @@ footer i {
   }
 
   .insights > *  {
+    align-items: center;
     display: flex;
     text-align: start;
     margin-inline: auto;
+    margin-bottom: 2rem;
     width: 80vw;
   }
 
@@ -212,10 +228,13 @@ footer i {
     margin-top: 15rem;
   }
 
+  .insights div p {
+    width: auto;
+  }
+
 
   .insights div > :first-child {
-    flex: .25;
-    justify-content: end;
+    flex: .15;
   }
 
   .insights h2, .insights p {
@@ -229,6 +248,7 @@ footer i {
 }
 
 @media (min-width: 745px) {
+
 
   .app__header .spring-left, .app__header .spring-right, .app__main .spring-down {
     display: initial;
@@ -264,6 +284,10 @@ footer i {
     top: 20rem;
   }
 
+  .app__header-img {
+    margin: -12rem -12rem;
+  }
+
   .app__header-img img{
     width: 27rem;
     height: 17rem;
@@ -271,7 +295,7 @@ footer i {
   }
 
   .app__main .introduce {
-    width: 51.563rem;
+    width: 45rem;
   }
 
   .app__main .introduce > picture {
@@ -279,11 +303,11 @@ footer i {
   }
 
   .app__main .introduce > div {
-    margin-right: 3.5rem;
+    margin-right: 2rem;
     margin-top: -8.5rem;
     text-align: start;
-    padding: 2rem;
-    width: 26rem;
+    padding: 1.8rem;
+    width: 25rem;
   }
 
   .introduce  p, .introduce h3 {
@@ -292,4 +316,110 @@ footer i {
     margin-inline: auto;
     width: 25rem;
   }
+}
+
+@media (min-width: 1024px) {
+
+  .app__header {
+    height: 28rem;
+  }
+
+  .app__header h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .app__header-img {
+    margin: -13rem -20rem;
+  }
+
+  .app__header-img img{
+    width: 35rem;
+    height: 20rem;
+    margin: 2.5rem 0;
+  }
+
+  .btn {
+    background: var(--primary-clr-green);
+    border: 0;
+    padding: .95rem;
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .insights {
+    display: flex;
+  }
+
+
+  .insights > div, .insights > :first-child {
+    flex-direction: column;
+    margin-top: 15rem;
+    padding: 1rem;
+  }
+  
+  .insights > div h2, .insights > div p  {
+    text-align: center;
+  }
+
+  .app__main .introduce {
+    width: 60rem;
+  }
+
+  .app__main .introduce > picture {
+    margin-right: 30rem;
+  }
+
+
+  .app__main .introduce img {
+    width: 29.813rem;
+  }
+
+  .app__main .introduce > div {
+    margin-right: -1rem;
+    margin-top: -15rem;
+    text-align: start;
+    padding: 1.8rem;
+    width: 30rem;
+  }
+
+  .introduce  p, .introduce h3 {
+    text-align: start;
+    margin: 0;
+    margin-inline: auto;
+    width: 25rem;
+  }
+
+  .introduce p, .introduce h3 {
+    text-align: start;
+    width: auto;
+  }
+}
+
+@media (min-width: 1350px) {
+
+  .app__header-redirect:hover {
+    color: var(--primary-clr-green);
+    background: transparent;
+    transform: 1s ;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .btn {
+    background: var(--primary-clr-green);
+    border: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .app__main .introduce > div {
+    margin-right: -1rem;
+    margin-top: -15rem;
+    text-align: start;
+    padding: 1.8rem;
+    width: 35rem;
+  }
+  
 }
